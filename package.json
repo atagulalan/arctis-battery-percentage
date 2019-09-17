@@ -7,14 +7,12 @@
   "bin": {
     "arctis-battery": "./percentage.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "steelseries",
     "hid",
     "percentage",
-    "arctis"
+    "arctis",
+    "battery"
   ],
   "author": "atagulalan",
   "license": "MIT",
