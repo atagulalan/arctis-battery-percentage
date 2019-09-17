@@ -10,9 +10,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need [NodeJS](https://nodejs.org/en/download/) on your computer.
 
+### Install Globally
+
+```
+npm i -g arctis-battery-percentage
+```
+
+after you install npm package, all you need to do is
+
+```
+arctis-battery
+```
+
 ### Installing
 
-You need to install npm packages before continuing
+You need to install npm production packages before continuing
 
 ```
 npm install --only=prod
@@ -22,6 +34,20 @@ after you install packages, all you need to do is
 
 ```
 node percentage
+```
+
+### Creating Images
+
+You need to install development npm packages before continuing
+
+```
+npm install
+```
+
+after you install packages, make changes to createImages.js colors and run this to generate new images:
+
+```
+node createImages
 ```
 
 Have fun!
