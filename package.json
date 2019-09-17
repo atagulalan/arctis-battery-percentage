@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "preferGlobal": true,
   "description": "Shows SteelSeries Arctis wireless device's battery percentages as a notification.",
-  "main": "index.js",
+  "main": "percentage.js",
   "bin": {
-    "arctis-percentage": "index.js"
+    "arctis-percentage": "percentage.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
