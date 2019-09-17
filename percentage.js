@@ -14,7 +14,7 @@ const series = [
 
 function notify(options){
 	const { execFile } = require('child_process');
-	execFile('./bin/SnoreToast.exe', ['-t', options.title, '-m', options.message, '-w', '-silent', '-p', options.icon, '-appID', options.appID], function(err, data) {
+	execFile(path.join(__dirname, `./bin/SnoreToast.exe`), ['-t', options.title, '-m', options.message, '-w', '-silent', '-p', options.icon, '-appID', options.appID], function(err, data) {
 		process.exit(1)                  
 	}); 
 }
