@@ -18,8 +18,5 @@
   "license": "MIT",
   "dependencies": {
     "node-hid": "^0.7.9"
-  },
-  "devDependencies": {
-    "canvas": "^2.6.0"
   }
 }
