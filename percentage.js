@@ -8,7 +8,8 @@ var devices = HID.devices()
 const series = [
 	[4152, 0x12ad], // Arctis 7 2019
 	[4152, 0x1260], // Arctis 7 2017
-	[4152, 0x1252] // Arctis Pro
+	[4152, 0x1252], // Arctis Pro
+	[4152, 0x12b3] // Actris 1 Wireless
 ]
 
 function getPercentage(callback) {
