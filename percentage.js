@@ -1,5 +1,13 @@
 #!/usr/bin/env node
+const path = require('path')
 var getPercentage = require('./getPercentage');
+
+function notify(options){
+	const { execFile } = require('child_process');
+	execFile(path.join(__dirname, `./bin/SnoreToast.exe`), ['-t', options.title, '-m', options.message, '-w', '-silent', '-p', options.icon, '-appID', options.appID], function(err, data) {
+		process.exit(1)                  
+	}); 
+}
 
 getPercentage((device, percentage) => {
 	percentage = percentage > 100 ? 100 : percentage < 0 ? 0 : percentage

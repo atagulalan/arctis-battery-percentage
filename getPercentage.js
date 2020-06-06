@@ -1,5 +1,3 @@
-
-const path = require('path')
 var HID = require('node-hid')
 HID.setDriverType('libusb')
 
@@ -11,13 +9,6 @@ const series = [
 	[4152, 0x1252], // Arctis Pro
 	[4152, 0x12b3] // Actris 1 Wireless
 ]
-
-function notify(options){
-	const { execFile } = require('child_process');
-	execFile(path.join(__dirname, `./bin/SnoreToast.exe`), ['-t', options.title, '-m', options.message, '-w', '-silent', '-p', options.icon, '-appID', options.appID], function(err, data) {
-		process.exit(1)                  
-	}); 
-}
 
 function getPercentage(callback) {
 	devices
@@ -39,6 +30,7 @@ function getPercentage(callback) {
 				var report = device.readSync()
 				callback(deviceInfo, report[2])
 			} catch (error) {
+				console.log(error)
 				console.log('Error: Cannot write to Arctis Wireless device. Please replug the device.')
 			}
 
