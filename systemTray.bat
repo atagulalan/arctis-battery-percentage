@@ -7,12 +7,12 @@ for /f "tokens=* delims=" %%v in ('dir /b /s /a:-d  /o:-n "%SystemRoot%\Microsof
    set "jsc=%%v"
 )
 
-if not exist "%~n0.exe" (
-    "%jsc%" /nologo /out:"%~n0.exe" "%~dpsfnx0"
+if not exist "utils/SABP.exe" (
+    "%jsc%" /nologo /out:"utils/SABP.exe" "%~dpsfnx0"
 )
 
-if exist "%~n0.exe" ( 
-    invisible.vbs "%~n0.exe" %* 
+if exist "utils/SABP.exe" ( 
+    cd utils && invisible.vbs "SABP.exe"
 )
 
 
@@ -27,17 +27,15 @@ import System.Drawing;
 import System.Drawing.SystemIcons;
 import System.Diagnostics;
 
-var timer1;
 var notification;
 
 main()
-
 
 function update(){
     //System.Console.WriteLine("Updating...");
     var willChange = exec().Trim();
     notification.Text = "Steelseries Arctis Battery Percentage ("+willChange+"%)"
-    notification.Icon = new Icon("icons/"+willChange+".ico");
+    notification.Icon = new Icon("../icons/"+willChange+".ico");
     System.Threading.Thread.Sleep(120000);
     update();
 }
@@ -53,13 +51,9 @@ function exec(){
     return output; 
 }
 
-
-
 function main(){
     notification = new System.Windows.Forms.NotifyIcon();
     notification.Visible = true;
-
     update();
-
     return 0;
 }

@@ -37,4 +37,6 @@ function getPercentage(callback) {
 		})
 }
 
-module.exports = getPercentage
+getPercentage((device, percentage) => {
+  console.log(percentage > 100 ? 100 : percentage < 0 ? 0 : percentage)
+})
