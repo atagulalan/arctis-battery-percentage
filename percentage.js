@@ -37,9 +37,9 @@ function getPercentage(callback) {
 			}
 
 			try {
-				device.write([0x06, 0x18])
+				device.write([0x06, 0x12])
 				var report = device.readSync()
-				callback(deviceInfo, report[2])
+				callback(deviceInfo, report[3])
 			} catch (error) {
 				console.log('Error: Cannot write to Arctis Wireless device. Please replug the device.')
 			}
