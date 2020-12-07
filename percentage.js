@@ -29,7 +29,7 @@ const series = [
     writeBytes: [0x06, 0x18],
   },
   {
-    name: 'Actris 1 Wireless',
+    name: 'Arctis 1 Wireless',
     vendorId: 4152,
     productId: 0x12b3,
     reportIdx: 2,
