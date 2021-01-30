@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const getHeadphoens = require('arctis-usb-finder').default
+const getHeadphones = require('arctis-usb-finder').default
 
 function notify(options) {
   const { execFile } = require('child_process')
@@ -25,7 +25,7 @@ function notify(options) {
 }
 
 function getPercentage(callback) {
-  getHeadphoens().forEach(callback)
+  getHeadphones().forEach(callback)
 }
 
 getPercentage((device) => {
