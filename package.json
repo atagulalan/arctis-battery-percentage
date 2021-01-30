@@ -17,9 +17,10 @@
   "author": "atagulalan",
   "license": "MIT",
   "dependencies": {
-    "node-hid": "^1.2.0"
+    "arctis-usb-finder": "0.0.5"
   },
   "devDependencies": {
-    "canvas": "^2.6.1"
+    "canvas": "^2.6.1",
+    "node-hid": "^1.2.0"
   }
 }
