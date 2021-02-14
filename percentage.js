@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const getHeadphones = require('arctis-usb-finder').default
+const path = require('path')
 
 function notify(options) {
   const { execFile } = require('child_process')
