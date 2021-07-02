@@ -17,6 +17,6 @@
   "author": "atagulalan",
   "license": "MIT",
   "dependencies": {
-    "node-hid": "^1.2.0"
+    "node-hid": "^2.1.1"
   }
 }
